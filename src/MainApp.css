@@ -204,8 +204,6 @@ button {
 }
 
 .subtask {
-  display: flex;
-  align-items: center;
   margin-bottom: 5px;
 }
 

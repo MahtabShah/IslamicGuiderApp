@@ -124,7 +124,8 @@ function TaskItem({ task, onToggle, onEdit, onDelete, onToggleSubtask }) {
         ></div>
       </div>
       {task.subtasks && task.subtasks.length > 0 && (
-        <div className="subtasks">
+        <details className="subtasks">
+          <summary>Click to reveal more information</summary>
           {task.subtasks.map((sub, index) => (
             <div className="subtask" key={index}>
               <input
@@ -135,7 +136,7 @@ function TaskItem({ task, onToggle, onEdit, onDelete, onToggleSubtask }) {
               <span>{sub.text}</span>
             </div>
           ))}
-        </div>
+        </details>
       )}
       <div className="task-actions">
         <button className="btn" onClick={() => onToggle(task.id)}>
