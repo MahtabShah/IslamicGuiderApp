@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./MainApp.css";
+import Alarm from "./Alarm.jsx"
 
 function Header({ hijriDate, toggleDarkMode }) {
   return (
@@ -117,6 +118,7 @@ function TaskItem({ task, onToggle, onEdit, onDelete, onToggleSubtask }) {
         </div>
         <div className={`task-priority priority-${task.priority}`}></div>
       </div>
+      <Alarm></Alarm>
       <div className="progress-bar">
         <div
           className="progress-fill"
